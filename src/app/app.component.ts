@@ -10,7 +10,7 @@ import '../style/app.scss';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  url = 'https://github.com/johnny-breen/angular2-giphy';
+  url = 'https://github.com/johnny-breen/angular2-giffimals';
   title: string;
 
   constructor(private api: ApiService) {
