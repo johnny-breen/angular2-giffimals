@@ -24,6 +24,6 @@ Tasks to complete:
 * complete the test cases, including the FakeGiphyService.
 * Add in a component for the radio switch
 * One the application side there is a bug to solve with the radio buttons 
-* Improve the presentation fo the app. 
+* Improve the presentation of the app, revise link to remote bootstrap 4 css use webpack instead. 
 * As extras, I was planning on adding a random gif of the day using the random api call from the giphy API. 
 * And adding a disclaimer and age rating filter.
