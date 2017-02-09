@@ -21,11 +21,11 @@
         <td>{{giphy.import_datetime}}</td>
         <td>{{giphy.slug}}</td>
         <td>{{giphy.rating}}</td>
-        <td> <giphy-modal-iframe [embedUrl]="giphy.embed_url | safe"></giphy-modal-iframe></td>
+        <td> <my-giphy-modal-iframe [embedUrl]="giphy.embed_url | mySafe"></my-giphy-modal-iframe></td>
       </tr>
     </table> 
   </div> 
   
- <ngb-pagination [collectionSize]="giphyResponse?.pagination.total_count" [(page)]="page" (pageChange)="loadPage(page)"  [maxSize]="10" [boundaryLinks]="true"></ngb-pagination>
-
+<ngb-pagination [collectionSize]="giphyResponse?.pagination.total_count" [(page)]="page" (pageChange)="loadPage(page)"  [maxSize]="10" [boundaryLinks]="true"></ngb-pagination>
+</div>
  

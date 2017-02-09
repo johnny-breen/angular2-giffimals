@@ -1,4 +1,4 @@
-import { NgModule, ApplicationRef } from '@angular/core';
+import { NgModule, ApplicationRef, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 import { FormsModule } from '@angular/forms';
@@ -11,17 +11,17 @@ import { routing } from './app.routing';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { GiphyComponent }       from './giphy/giphy.component';
 import { GiphyService }         from './giphy/giphy.service';
-import { GiphyModal }       from './giphy/giphy.modal.component';
+import { GiphyModalComponent }       from './giphy/giphy.modal.component';
 import { SafePipe } from './shared/safe.pipe';
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
 @NgModule({
   imports: [
+    FormsModule,
     BrowserModule,
     HttpModule,
     NgbModule.forRoot(),
-    FormsModule,
     routing
   ],
   declarations: [
@@ -29,14 +29,15 @@ import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
     HomeComponent,
     AboutComponent,
     GiphyComponent,
-    GiphyModal,
+    GiphyModalComponent,
     SafePipe
   ],
   providers: [
-    ApiService, 
-    GiphyService, 
+    ApiService,
+    GiphyService,
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {
   constructor(public appRef: ApplicationRef) {}

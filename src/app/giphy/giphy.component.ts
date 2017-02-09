@@ -41,7 +41,6 @@ export class GiphyComponent implements OnInit {
     });
     this.getGifs();
   }
-  
   loadModal() {
     console.log('loading modal data');
   }

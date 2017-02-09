@@ -1,13 +1,12 @@
-import {Component, Input} from '@angular/core';
-import {NgbModal}         from '@ng-bootstrap/ng-bootstrap';
+import { Component, Input } from '@angular/core';
+import { NgbModal }         from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'giphy-modal-iframe',
+  selector: 'my-giphy-modal-iframe',
   templateUrl: './giphy.modal.component.html'
 })
-export class GiphyModal {
+export class GiphyModalComponent {
   @Input() public embedUrl: string;
-  
   constructor(private modalService: NgbModal) {
   }
 
